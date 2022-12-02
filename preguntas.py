@@ -7,7 +7,6 @@ En este laboratio se construirá un clasificador usando k-NN para el dataset de 
 """
 import matplotlib.pyplot as plt
 import numpy as np
-import pandas as pd
 from sklearn import datasets
 
 
@@ -96,7 +95,7 @@ def pregunta_03():
     # Se itera sobre diferentes valores de vecinos
     for i, k in enumerate(neighbors):
         # Cree un clasificador con k vecinos
-        knn = knn = KNeighborsClassifier(n_neighbors=k)
+        knn = KNeighborsClassifier(n_neighbors=k)
 
         # Entrene el clasificador con los datos de entrenamiento
         knn.fit(X_train, y_train)
