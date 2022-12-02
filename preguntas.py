@@ -34,33 +34,33 @@ def pregunta_02():
     Complete el código presentado a continuación.
     """
     # Importe KNeighborsClassifier de sklearn.neighbors
-    from ____ import ____
+    from sklearn.neighbors import KNeighborsClassifier
 
     # Importe train_test_split de sklearn.model_selection
-    from ____ import ____
+    from sklearn.model_selection import train_test_split
 
     # Cargue el dataset digits
-    digits = ____.____()
+    digits = datasets.load_digits()
 
     # Cree los vectors de características y de salida
-    X = ____.____
-    y = ____.____
+    X = digits.data
+    y = digits.target
 
     # Divida los datos de entrenamiento y prueba. Los conjuntos de datos están
     # estratificados. La semilla del generador de números aleatorios es 42.
     # El tamaño del test es del 20%
-    X_train, X_test, y_train, y_test = ____(
-        ____, ____, test_size=____, random_state=____, stratify=____
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.2, random_state=42, stratify=y
     )
 
     # Cree un clasificador con siete vecinos
-    knn = ____
+    knn = KNeighborsClassifier(n_neighbors=7)
 
     # Entrene el clasificador
-    ____
+    knn.fit(X_train, y_train)
 
     # Imprima la precisión (score) del clasificador en el conjunto de datos de prueba
-    print(round(knn.score(____, ____), 4))
+    print(round(knn.score(X_test, y_test), 4))
 
 
 def pregunta_03():
