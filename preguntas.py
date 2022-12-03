@@ -8,6 +8,7 @@ En este laboratio se construirá un clasificador usando k-NN para el dataset de 
 import matplotlib.pyplot as plt
 import numpy as np
 from sklearn import datasets
+import pandas as pd
 
 
 def pregunta_01():
